@@ -1,8 +1,8 @@
-THIS IS CURRENTLY AN EARLY DRAFT
-
 # Raspberry Pi school
 
 Hello! This is a ten week course aimed at teaching children the very basics of Raspberry Pi — how fun it can be, and what a great learning tool it is.
+
+The aim here is not to become experts in Raspberry Pi, but to provide a taster, and get you interested in learning more!
 
 ## Required hardware
 
@@ -35,3 +35,7 @@ optionally, if you want to play with hardware hacking, it is a good idea to get 
 8. Processing
 9. Physical computing
 10. Continue with physical computing
+
+## See also
+
+[Raspberry Pi Foundation learning resources](https://www.raspberrypi.org/resources/learn/)
