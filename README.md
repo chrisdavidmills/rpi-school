@@ -25,7 +25,7 @@ optionally, if you want to play with hardware hacking, it is a good idea to get 
 
 ## Lesson plan
 
-1. Setting up the Pi / playing with it. The [quickstart guide](https://www.raspberrypi.org/learning/hardware-guide/quickstart/) is a good place to start.
+1. [Setting up the Pi](setup.md)
 2. Python
 3. Continue with Python
 4. Continuing with Python/Minecraft Pi
