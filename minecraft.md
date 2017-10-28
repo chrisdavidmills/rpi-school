@@ -32,7 +32,9 @@ To program Minecraft Pi, we need to use Python.
 
 Like we briefly looked at in the previous lesson, we need to import a module to allow us to access the Minecraft world from Python. Enter the following line in your new file:
 
+```
 from mcpi.minecraft import Minecraft
+```
 
 Next, enter the following line that creates an instance of the Minecraft world that we can start to do things to:
 
@@ -48,14 +50,14 @@ mc.postToChat("Hello , I'm in Minecraft!")
 
 ## Setting and getting player position
 
-You can use ```player.getPos()``` and ```player.setPos()``` to get and set your character's position in the world. For example, replace the ```postToChat()``` line with the following two lines
+You can use ```player.getPos()``` and ```player.setPos()``` to get and set your character's position in the world. For example, replace the ```postToChat()``` line with the following two lines:
 
 ```
 x, y, z = mc.player.getPos()
 print("Player is at position " + str(x) + ", " + str(y) + ", " + str(z) + ".")
 ```
 
-Now add the following below the previous two lines.
+Now add the following below the previous two lines:
 
 ```
 mc.player.setPos(x, y+100, z)
@@ -85,7 +87,9 @@ from mcpi import block
 
 Now you can retrieve block IDs via more understandable keywords, for example:
 
+```
 mc.setBlock(x+1, y, z, block.GLOWSTONE_BLOCK.id)
+```
 
 You still need to put ```.id``` on the end of it to access the ID, which is what the ```setBlock()``` method expects.
 
@@ -106,7 +110,7 @@ while True:
     sleep(0.1)
 ```
 
-This constantly grows flowers behind you as you walk around. ```while True``` always returns true, so the program runs forever (you cna stop it by going to the REPL and pressing Ctrl + C).
+This constantly grows flowers behind you as you walk around. ```while True``` always returns true, so the program runs forever (you can stop it by going to the REPL and pressing Ctrl + C).
 
 Can you try to change it so that when you walk along, a red carpet is put down beneath you? remember that y is the coordinate that states how far up or down a position is.
 
