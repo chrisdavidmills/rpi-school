@@ -12,9 +12,10 @@ We will use Python quite a bit in this course — it is used to control quite a 
 
 ### Some teacher's notes
 
-* When the tutorial starts to use indentation, the REPL starts to become annoying. At this point, use a Python file (in the REPL, do File > New File)
+* When the tutorial starts to use indentation, the REPL starts to become annoying. At this point, use a Python file (in the REPL, do File > New File).
 * To save a file, do File > Save As... and then choose somewhere memorable to save your file, like the desktop.
-* To run your file, in the file window do Run > Run Module
+* To run your file, in the file window do Run > Run Module.
+* To exit out of a running program, press Ctrl + C.
 
 ### Simple if else example
 
@@ -67,7 +68,7 @@ def greeting():
 greeting()
 ```
 
-### Function example
+### Recursive function example
 
 ```
 def greeting():
@@ -82,8 +83,7 @@ greeting()
 
 ```
 import random
-
-var insults = [
+insults = [
   "Your hair looks like a hedge",
   "Your feet smell of cheese",
   "Your nose could be used to vacuum the floor",
@@ -91,7 +91,7 @@ var insults = [
 ]
 
 def insult_me():
-  rand = random.randInt(0,len(insults)-1)
+  rand = random.randint(0,len(insults)-1)
   print(insults[rand])
 
 insult_me()
@@ -100,6 +100,7 @@ insult_me()
 
 # See also
 
-* (The Python tutorial)[https://docs.python.org/3/tutorial/]
-* (Learn Python)[https://www.learnpython.org/]
-* (Codecademy Learn Python)[https://www.codecademy.com/learn/learn-python]
+* [The Python tutorial](https://docs.python.org/3/tutorial/)
+* [Learn Python](https://www.learnpython.org/)
+* [Codecademy Learn Python](https://www.codecademy.com/learn/learn-python)
+* [Raspberry Pi Foundation learning resources](https://www.raspberrypi.org/resources/learn/)
