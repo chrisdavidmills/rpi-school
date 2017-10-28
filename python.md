@@ -10,9 +10,13 @@ In this lesson we will look at the language very briefly, and start thinking abo
 
 We will use Python quite a bit in this course — it is used to control quite a lot of things on the Pi. To start with, we will go through a number of basic features of the language to get you familiar. To achieve this, we will follow the Raspberry Pi Foundation's [Basic Python](https://www.raspberrypi.org/documentation/usage/python/) tutorial. Open this link in a new browser tab now.
 
+We can start up Python by choosing Programming > Python 3 in the main Pi menu. This opens up simple program called a REPL (Read–Eval–Print Loop), which allows you to enter commands and see the results — perfect for testing out simple code. You can also create separate files in which to store real Python programs by choosing File > New File in the REPL.
+
+We'll use Python 3 rather than Python 2, as it is more up-to-date.
+
 ### Some teacher's notes
 
-* When the tutorial starts to use indentation, the REPL starts to become annoying. At this point, use a Python file (in the REPL, do File > New File).
+* When the tutorial starts to use indentation, the REPL starts to become annoying. At this point, use a dedicated Python file instead.
 * To save a file, do File > Save As... and then choose somewhere memorable to save your file, like the desktop.
 * To run your file, in the file window do Run > Run Module.
 * To exit out of a running program, press Ctrl + C.
@@ -79,7 +83,7 @@ def greeting():
 greeting()
 ```
 
-## Simple random insult program
+### Simple random insult program
 
 ```
 import random
@@ -98,7 +102,7 @@ insult_me()
 
 ```
 
-# See also
+## See also
 
 * [The Python tutorial](https://docs.python.org/3/tutorial/)
 * [Learn Python](https://www.learnpython.org/)
