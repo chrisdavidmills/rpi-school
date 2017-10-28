@@ -28,7 +28,7 @@ We've already walked around most of the hardware. You'll see that it's also got:
 * Two more USB ports to attach other hardware into — very useful.
 * A headphone jack to plug headphones or speakers into, so you can have sound.
 * A networking cable so you can plug the Pi directly into a network (e.g. a router for internet access).
-* 40 connector pins, which allow you to connect hardware devices directly to the Pi's motherboard. This is really cool, as it allows you to do your own electronics experiments. It has power pins (to provide power), ground pins (to complete a circuit), and GPIO pins (that allow hardware to be controlled with code). [This page explains more about the connector pins](https://projects.raspberrypi.org/en/projects/physical-computing).
+* 40 connector pins, which allow you to connect hardware devices directly to the Pi's motherboard. This is really cool, as it allows you to do your own electronics experiments. It has power pins (to provide power), ground pins (to complete a circuit), and GPIO pins (that allow hardware to be controlled with code). [This tutorial explains more about the connector pins](https://projects.raspberrypi.org/en/projects/physical-computing).
 
 ## A quick tour of the Pi's software
 

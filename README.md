@@ -26,7 +26,7 @@ optionally, if you want to play with hardware hacking, it is a good idea to get 
 ## Lesson plan
 
 1. [Setting up the Pi](setup.md)
-2. Python
+2. [Starting with Python](python.md)
 3. Continue with Python
 4. Continuing with Python/Minecraft Pi
 5. Minecraft Pi or something else with Python?
