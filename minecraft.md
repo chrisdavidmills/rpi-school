@@ -114,7 +114,48 @@ This constantly grows flowers behind you as you walk around. ```while True``` al
 
 Can you try to change it so that when you walk along, a red carpet is put down beneath you? remember that y is the coordinate that states how far up or down a position is.
 
-## Building a house
+### detecting the block beneath you
+
+In this example we detect the block we are stood upon. If it is grass, we plant a carpet of flowers around us:
+
+```
+from mcpi.minecraft import Minecraft
+mc = Minecraft.create()
+
+grass = 2
+flower = 38
+
+while True:
+    x, y, z = mc.player.getPos()  # player position (x, y, z)
+    block_beneath = mc.getBlock(x, y-1, z)  # block ID
+    print(block_beneath)
+
+    if block_beneath == grass:
+        mc.setBlocks(x-1, y, z-1, x+1, y, z+1, flower)
+```
+
+### Random lava!
+
+Let's add a bit of excitement into the game, by spawning random lava above you every so often:
+
+```
+from mcpi.minecraft import Minecraft
+import random
+mc = Minecraft.create()
+
+lava = 10
+
+while True:
+    x, y, z = mc.player.getPos()  # player position (x, y, z)
+    block_beneath = mc.getBlock(x, y-1, z)  # block ID
+    print(block_beneath)
+
+    rand = random.randint(0,100)
+    if rand == 50:
+        mc.setBlock(x, y+10, z, lava)
+```
+
+### Building a house
 
 The following script builds an entire house right next to you in the minecraft world!
 
