@@ -114,7 +114,7 @@ This constantly grows flowers behind you as you walk around. ```while True``` al
 
 Can you try to change it so that when you walk along, a red carpet is put down beneath you? remember that y is the coordinate that states how far up or down a position is.
 
-### detecting the block beneath you
+### Detecting the block beneath you
 
 In this example we detect the block we are stood upon. If it is grass, we plant a carpet of flowers around us:
 
