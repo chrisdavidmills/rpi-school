@@ -28,7 +28,7 @@ optionally, if you want to play with hardware hacking, it is a good idea to get 
 1. [Setting up the Pi](setup.md)
 2. [Starting with Python](python.md)
 3. [Programming Minecraft](minecraft.md)
-4. Continuing with Minecraft Pi
+4. [Physical computing with Python](physical.md)
 5. Minecraft Pi or something else with Python?
 6. Scratch
 7. Sonic Pi
