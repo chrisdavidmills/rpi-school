@@ -87,14 +87,17 @@ green = LED(11)
 
 below the previous code, enter the following:
 
+```
 while True:
   redToGreen()
   greenToRed()
+```
 
 Now we'll define each of the two functions invoked in the above loop.
 
 First, ```redToGreen()```:
 
+```
 def redToGreen():
   red.off()
   sleep(5)
@@ -104,9 +107,11 @@ def redToGreen():
   amber.off()
   green.on()
   sleep(15)
+```
 
 Now, ```greenToRed()```:
 
+```
 def greenToRed():
   green.off()
   sleep(5)
@@ -116,7 +121,7 @@ def greenToRed():
   sleep(5)
   red.on()
   sleep(15)
-
+```
 
 
 # See also
