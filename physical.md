@@ -68,9 +68,9 @@ First, the hardware:
 
 1. Stop your previous program running by going to the Python shell and pressing Ctrl + C.
 2. Find out a red, yellow, and green LED, two more 330 ohm resistors, and four more jump leads.
-3. Replace your current LED with a red one, remembering to put it in the right way. To recap, this one is plugged in at GP17 (left, 6th pin) and GND (right, 3rd pin)
-4. Make a copy of the existing circuit, using GP18 (right, 6th pin) and GND (right, 7th pin). Test it by running the existing example on it, substituting LED(17) for LED(18)
-5. Make another copy of the existing circuit, using GP11 (left, 12th pin) and GND (left, 13th pin). Test it by running the existing example on it, substituting LED(17) for LED(11)
+3. Replace your current LED with a red one, remembering to put it in the right way. To recap, this one is plugged in at GP17 (left, 6th pin) and GND (right, 3rd pin).
+4. Make a copy of the existing circuit, using GP18 (right, 6th pin) and GND (right, 7th pin). Test it by running the existing example on it, substituting ```LED(17)``` for ```LED(18)```.
+5. Make another copy of the existing circuit, using GP11 (left, 12th pin) and GND (left, 13th pin). Test it by running the existing example on it, substituting ```LED(17)``` for ```LED(11)```.
 
 Now, the code:
 
