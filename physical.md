@@ -18,6 +18,15 @@ We will be plugging some wires and components into these pins to have some fun w
 
 <strong>DO NOT PLUG THINGS IN RANDOMLY — FOLLOW THE INSTRUCTIONS!</strong>
 
+## Basic notes about electronics
+
+1. LEDs have to be connected to a circuit in one direction — the power has to be connected to the longer leg, and the earth to the shorter leg.
+2. You also need to use a resistor, to limit the amount of current going into the LED, otherwise it will pop! Anything over about 50 ohms will do. You need to put the resistor before the LED in the circuit.
+3. The current flows from the power supply (orange, red, or yellow pin) to the ground (black pin).
+4. Always use the same colour to go from your power supply pin, and the same colour to go to your ground, e.g. blue from power, and black to ground.
+5. To work out the strength of a resistor, you need to read the coloured bands — [How to Read Axial Lead Resistors](https://www.wikihow.com/Read-Axial-Lead-Resistors) will help you out. For these simple LED examples, about 330 ohms is good.
+6. Using a breadboard is the easiest way to create a circuit. The metal strips run horizontally across the board; you can use each set of 5 holes as a connector for one part of the circuit.
+
 ## Basic work with an LED
 
 In this section, we'll follow the [Physical Computing with Python](https://projects.raspberrypi.org/en/projects/physical-computing) course from the Raspberry Pi Foundation — these sections:
@@ -27,15 +36,6 @@ In this section, we'll follow the [Physical Computing with Python](https://proje
 * Flashing an LED sections.
 
 Watch me do each step first, then you have a go.
-
-### Basic notes about electronics
-
-1. LEDs have to be connected to a circuit in one direction — the power has to be connected to the longer leg, and the earth to the shorter leg.
-2. You also need to use a resistor, to limit the amount of current going into the LED, otherwise it will pop! Anything over about 50 ohms will do. You need to put the resistor before the LED in the circuit.
-3. The current flows from the power supply (orange, red, or yellow pin) to the ground (black pin).
-4. Always use the same colour to go from your power supply pin, and the same colour to go to your ground, e.g. blue from power, and black to ground.
-5. To work out the strength of a resistor, you need to read the coloured bands — [How to Read Axial Lead Resistors](https://www.wikihow.com/Read-Axial-Lead-Resistors) will help you out. For these simple LED examples, about 330 ohms is good.
-6. Using a breadboard is the easiest way to create a circuit. The metal strips run horizontally across the board; you can use each set of 5 holes as a connector for one part of the circuit.
 
 ### A slightly more complex LED sequence
 
@@ -83,46 +83,77 @@ from time import sleep
 red = LED(17)
 amber = LED(18)
 green = LED(11)
-```
 
-below the previous code, enter the following:
-
-```
-while True:
-  redToGreen()
-  greenToRed()
+red.on()
+amber.off()
+green.off()
 ```
 
 Now we'll define each of the two functions invoked in the above loop.
 
-First, ```redToGreen()```:
+First, enter this below the previous code:
 
 ```
 def redToGreen():
-  red.off()
-  sleep(5)
-  amber.on()
-  sleep(5)
-  red.off()
-  amber.off()
-  green.on()
-  sleep(15)
+    sleep(10)
+    amber.on()
+    sleep(1.5)
+    red.off()
+    amber.off()
+    green.on()
+    sleep(10)
 ```
 
-Now, ```greenToRed()```:
+Now, enter this function, again at the bottom:
 
 ```
 def greenToRed():
-  green.off()
-  sleep(5)
-  amber.on()
-  sleep(5)
-  amber.off
-  sleep(5)
-  red.on()
-  sleep(15)
+    green.off()
+    sleep(1.5)
+    amber.on()
+    sleep(1.5)
+    amber.off()
+    sleep(1.5)
+    red.on()
 ```
 
+Finally, enter the following loop to keep the sequence going forever (until you quit out of it with Ctrl + C):
+
+```
+while True:
+    redToGreen()
+    greenToRed()
+```
+
+Note: You need to define functions before you can call them. If you put the ```while True:``` loop before the function definitions, the code would give an error.
+
+## Getting input with a push button
+
+now we'll have a play with a push button. This is a little square component with four legs. It's basically a resistor with two states — none (on), and really high (off). Pushing the button completes the circuit.
+
+Let's start by setting up some hardware:
+
+1. Put a button onto the breadboard, across three rows. The flat legs of the button should run parallel with the lines of the breadboard. Be gentle, as getting the button legs inserted into the holes can be a bit fiddly.
+2. Get two jump leads, and connect them to GP26 (left, 19th pin) and GND (left, 20th pin). wire one to each side of the button.
+3. Create a new Python file and save it as button_test.py.
+4. enter the following code into it.
+
+```
+from gpiozero import Button
+from time import sleep
+
+button = Button(26)
+
+def press():
+    button.wait_for_press()
+    print('You pushed me!')
+    sleep(1)
+    press()
+
+press()
+```
+
+So here we are using ```button.wait_for_press()``` to stop code execution until the button is pressed. When it is pressed, we print a message to the screen to let us know. We use a recursive function to run the code again and again.
 
 # See also
 
