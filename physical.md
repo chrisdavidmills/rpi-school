@@ -135,8 +135,11 @@ Let's start by setting up some hardware:
 
 1. Put a button onto the breadboard, across three rows. The flat legs of the button should run parallel with the lines of the breadboard. Be gentle, as getting the button legs inserted into the holes can be a bit fiddly.
 2. Get two jump leads, and connect them to GP26 (left, 19th pin) and GND (left, 20th pin). wire one to each side of the button.
-3. Create a new Python file and save it as button_test.py.
-4. enter the following code into it.
+
+Now for the software:
+
+1. Create a new Python file and save it as button_test.py.
+2. enter the following code into it.
 
 ```
 from gpiozero import Button
@@ -155,6 +158,64 @@ press()
 
 So here we are using ```button.wait_for_press()``` to stop code execution until the button is pressed. When it is pressed, we print a message to the screen to let us know. We use a recursive function to run the code again and again.
 
+### Adding in a buzzer
+
+Now let's add in a buzzer to create a simple gameshow — fingers on buzzers!
+
+The hardware:
+
+1. Put a buzzer onto the breadboard, across four rows. The log leg is the positive, and should be connected to the GPIO pin, in the same manner as the LEDs we played with.
+2. Get two jump leads, and connect them to GP12 (right, 16th pin) and GND (right, 17th pin). wire the GPIO to the positive side, and the GND to the negative side.
+
+Now the software. Add the following line below your previous ```from``` line:
+
+```
+from gpiozero import Buzzer
+```
+
+Add the following just below your ```button =``` line:
+
+```
+buzzer = Buzzer(12)
+```
+
+Update the function to the following:
+
+def press():
+    button.wait_for_press()
+    buzzer.on()
+    sleep(1)
+    buzzer.off()
+    press()
+
+
+### Two player reaction test game
+
+Let's try creating a two-player reaction-testing game — see [Python quick reaction game](https://projects.raspberrypi.org/en/projects/python-quick-reaction-game).
+
+### Other ideas
+
+If we get time, let's try building other interesting things. See the [gpiozero basic recipes article](https://gpiozero.readthedocs.io/en/stable/recipes.html).
+
+[Full color LEDs](https://gpiozero.readthedocs.io/en/stable/recipes.html#full-color-led) are really good fun. This code is really pretty:
+
+```
+from gpiozero import RGBLED
+from time import sleep
+import random
+
+led = RGBLED(red=2, green=3, blue=4)
+
+while True:
+  rand1 = random.uniform(0,1)
+  rand2 = random.uniform(0,1)
+  rand3 = random.uniform(0,1)
+  led.color = (rand1, rand2, rand3)
+  sleep(0.2)
+```
+
+
 # See also
 
 [Physical Computing with Python](https://projects.raspberrypi.org/en/projects/physical-computing)
+[The gpiozero documentation](https://gpiozero.readthedocs.io/en/stable/index.html)
