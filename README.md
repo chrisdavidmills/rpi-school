@@ -19,9 +19,10 @@ Each student (or group) will need as a bare minimum the hardware detailed in the
 optionally, if you want to play with hardware hacking, it is a good idea to get hold of a [physical computing kit](https://projects.raspberrypi.org/en/projects/physical-computing). This should include at least:
 
 * A solderless breadboard
-* Jumper leads
+* Jump leads
 * Resistors
 * LEDs
+* buttons
 
 ## Lesson plan
 
@@ -29,12 +30,10 @@ optionally, if you want to play with hardware hacking, it is a good idea to get 
 2. [Starting with Python](python.md)
 3. [Programming Minecraft](minecraft.md)
 4. [Physical computing with Python](physical.md)
-5. Minecraft Pi or something else with Python?
-6. Scratch
+5. [Python turtle](turtle.md)
+6. [Scratch](scratch.md)
 7. Sonic Pi
 8. Processing
-9. Physical computing
-10. Continue with physical computing
 
 ## See also
 
