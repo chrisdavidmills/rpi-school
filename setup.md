@@ -9,9 +9,11 @@ In this lesson we will get familiar with the Raspberry Pi (Pi), learning how to 
 3. We now need to put the Pi inside its protective case. Take the top and side covers off the case, then unclip the top of the box from the bottom. Now, very gently put the actual computer inside the case — there are four little plastic pins that you will need to line up with the corresponding holes in the Raspberry Pi. <strong>Be very gentle with the computer, and hold it on the edges — don't touch anything otherwise you might damage it.</strong> Once it is in, put the box top and covers back on.
 4. Next, we need to insert the Micro SD card into the bottom of the Pi. This contains the computer's entire operating system and storage space. One you've turned the Pi upsidedown, the card needs to be inserted with the thin end towards the slot, and the writing pointing up. <strong>This is also really fragile, so be really careful</strong>.
 5. Now we need to plug things into the computer. You need to plug:
-** The keyboard and mouse into a USB port each.
-** The end of the HDMI cable that isn't plugged into the TV into the HDMI port
-** <strong>THE VERY LAST STEP</strong> — The power cable into the mains electricity socket, and then plug the other end of it — the Micro USB plug — into the Micro USB socket. This will turn the Raspberry Pi on, and you'll start to see it boot up.
+<ul>
+<li>The keyboard and mouse into a USB port each.</li>
+<li>The end of the HDMI cable that isn't plugged into the TV into the HDMI port.</li>
+<li><strong>THE VERY LAST STEP</strong> — The power cable into the mains electricity socket, and then plug the other end of it — the Micro USB plug — into the Micro USB socket. This will turn the Raspberry Pi on, and you'll start to see it boot up.</li>
+</ul>
 
 ## Connecting your Pi to the internet
 
@@ -27,7 +29,7 @@ We've already walked around most of the hardware. You'll see that it's also got:
 
 * Two more USB ports to attach other hardware into — very useful.
 * A headphone jack to plug headphones or speakers into, so you can have sound.
-* A networking cable so you can plug the Pi directly into a network (e.g. a router for internet access).
+* A networking port so you can plug the Pi directly into a network (e.g. a router for internet access).
 * 40 connector pins, which allow you to connect hardware devices directly to the Pi's motherboard. This is really cool, as it allows you to do your own electronics experiments. It has power pins (to provide power), ground pins (to complete a circuit), and GPIO pins (that allow hardware to be controlled with code). [This tutorial explains more about the connector pins](https://projects.raspberrypi.org/en/projects/physical-computing).
 
 ## A quick tour of the Pi's software
@@ -35,6 +37,7 @@ We've already walked around most of the hardware. You'll see that it's also got:
 The Pi comes with a lot of really cool and useful software, making it great for learning:
 
 * Programming environments like Scratch, Sonic Pi, Wolfram/Mathematica, and IDEs for Java and Python.
+* Educational games, like Minecraft (woo hoo!)
 * LibreOffice programs to allow you to create documents, spreadsheets, presentations, etc.
 * The Epithany web browser, to provide basic internet access.
 
