@@ -1,6 +1,6 @@
 # Scratch on the Raspberry Pi
 
-Scratch is a really fun visual programming language, developed by [MIT](enter-url-here) in the USA, allowing you to rapidly put together apps. It is included on the RPi by default. Scratch is specially designed to teach programming concepts to beginners, so if you found Python difficult to understand, Scratch could help clear things up a bit.
+Scratch is a really fun visual programming language, developed by [MIT](http://web.mit.edu/) in the USA, allowing you to rapidly put together apps. It is included on the RPi by default. Scratch is specially designed to teach programming concepts to beginners, so if you found Python difficult to understand, Scratch could help clear things up a bit.
 
 In this lesson we will teach you some Scratch. If you've done some before, then great — you can help with the learning process by helping out some of your classmates, or look up some more advanced exercises to try.
 
@@ -10,7 +10,7 @@ In this lesson we will teach you some Scratch. If you've done some before, then 
 
 This is easy — You simply need to go to the main menu and choose "Programming > Scratch". The main UI should look something like this:
 
-[INSERT SCREENSHOT SCRATCH 1.4 UI]
+![](scratch-1.4.png)
 
 ### Scratch main features
 
@@ -127,7 +127,7 @@ Next, we want to make our ball move.
 To do so:
 
 1. Make sure "Sprite1" is selected.
-2. Add blocks to the work area, just like so
+2. Add blocks to the work area, just like so:
 
 ![](ball-move.png)
 
@@ -166,7 +166,7 @@ To do so:
 
 This new bit of script causes a new check to be done each time the loop runs:
 
-1. The game checks whether the ball (Sprite1) is touching the bat (Sprite2).
+1. The game checks whether the ball ("Sprite1") is touching the bat ("Sprite2").
 2. If so, we first check to see if the ball's direction is -135 degrees — travelling diagonally down to the left. If it is we rotate the ball's direction 90 degrees clockwise, so it starts travelling diagonally up to the left.
 3. We then check whether the ball's direction is 135 degrees — travelling diagonally down to the right. If it is we rotate the ball's direction 90 degrees anticlockwise, so it starts travelling diagonally up to the right.
 
@@ -198,7 +198,7 @@ This does the following:
 1. It checks to see if the number of lives is 0.
 2. If so, it broadcasts a "gameLost" message. It then waits 1 second, and stops all scripts from running. We wait one second because if we stop all the code running immediately, some of the code we want to run before the end of the game is stopped too!
 
-Finally for this section, click the Stage and add the following three blocks to its work area:
+Finally for this section, click the "Stage" and add the following three blocks to its work area:
 
 ![](life-lost-events.png)
 
@@ -214,7 +214,7 @@ One major thing still missing is that the ball doesn't collide with the bricks �
 
 Let's change this.
 
-1. Click Sprite3 (our single brick) to make sure the next code we add is added to the brick's work area.
+1. Click "Sprite3" (our single brick) to make sure the next code we add is added to the brick's work area.
 2. Adding the following new block to the work area:
 
 ![](brick-ball-collide.png)
@@ -295,7 +295,7 @@ There's another interesting thing about the RPi version of Scratch — It allows
 
 Let's first go through a simple example to show how to recreate the simple LED demo we saw earlier on.
 
-1. First, of all, wire up the simple LED circuit we showed you in the [physical computing lesson](get-the-exact-url).
+1. First, of all, wire up the simple LED circuit we showed you in the physical computing lesson (go to [Physical computing](https://projects.raspberrypi.org/en/projects/physical-computing) then click the "Lighting an LED" link on the left).
 2. Next, turn the Scratch GPIO server on — this is the application that runs in the background and communicates between scratch and the GPIO pins on the RPi. To do this, choose "Edit > Start GPIO server".
 3. Now create a new Scratch project by choosing "File > New".
 4. Drag a "when this sprite clicked" block to the work area (Events).
